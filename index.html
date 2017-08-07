@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Isaac Hirschfeld</title>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300"
+      rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Catamaran', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        align-items: center;
+        background-color: #fefefe;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      .section {
+        align-items: center;
+        color: #666;
+        display: flex;
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .section span {
+        flex: 1;
+      }
+
+      .section .fa  {
+        text-align: center;
+        width: 40px;
+      }
+
+      .row {
+        color: #666;
+        display: flex;
+        flex-direction: row;
+        margin: 8px 0;
+        width: auto;
+      }
+
+      .row .fa {
+        align-self: center;
+      }
+
+      .name {
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: 100px;
+      }
+
+      section {
+        margin: 20px;
+        max-width: 400px;
+        width: auto;
+      }
+
+      .row .fa {
+        margin: 0 16px;
+        text-align: center;
+        width: 24px;
+      }
+
+      .content {
+        display: inline-block;
+      }
+
+      a, a:visited {
+        color: #99f;
+        text-decoration: none;
+      }
+
+      a:hover, a:focus {
+        color: #88e;
+        text-decoration: underline;
+      }
+
+      .thumb img {
+        height: 100px;
+        object-fit: cover;
+        width: 100px;
+      }
+
+      .project {
+        display: flex;
+        margin: 8px 0;
+      }
+
+      .project > .description {
+        display: flex;
+        flex-direction: column;
+        margin: 4px 0 4px 16px;
+      }
+
+      .project .title {
+        color: #666;
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      .project .info {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 8px 4px 8px 12px;
+      }
+
+
+      @media screen and (max-width: 600px) {
+        .project {
+          align-items: center;
+          flex-direction: column;
+        }
+
+        .project img {
+          border-radius: 8px;
+        }
+
+        .project .description {
+          align-items: center;
+          margin: 4px;
+          text-align: center;
+        }
+
+        .project .info {
+          padding: 8px;
+        }
+
+        .tags {
+          justify-content: center;
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        align-items: center;
+        background-color: #ccc;
+        border-radius: 16px;
+        color: #444;
+        display: flex;
+        font-size: 14px;
+        height: 20px;
+        justify-content: center;
+        margin: 2px;
+        padding: 0 8px;
+      }
+
+      .centered {
+        flex: 1;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <div class="name">
+          Isaac Hirschfeld
+        </div>
+        <div class="subhead">
+          Software Developer, Cybersecurity Major, Hobbyist
+        </div>
+      </header>
+    </section>
+    <section>
+      <header class="section">
+        <span>About</span>
+        <i class="fa fa-id-card"></i>
+      </header>
+      <article>
+        <div class="row">
+          <i class="fa fa-envelope"></i>
+          <div class="content">
+            <a href="mailto:ihirschf@stevens.edu" title="Email">ihirschf@stevens.edu</a>
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-linkedin"></i>
+          <div class="content">
+            <a target="_blank" href="https://www.linkedin.com/in/isaac-hirschfeld" title="LinkedIn">Linked In Profile</a>
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-github"></i>
+          <div class="content">
+            <a target="_blank" href="https://github.com/meshiest" title="Github">@Meshiest</a>
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-telegram"></i>
+          <div class="content">
+            <a href="t.me/reheatedcake" title="Telegram">@ReHeatedCake</a>
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-graduation-cap"></i>
+          <div class="content">
+            Stevens Institute of Technology<br/>
+            Cyber Security, Class of 2020
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-map-marker"></i>
+          <div class="content">
+            Austin, TX
+          </div>
+        </div>
+      </article>
+    </section>
+    <section>
+      <header class="section">
+        <span>Portfolio</span>
+        <i class="fa fa-briefcase"></i>
+      </header>
+      <article class="project">
+        <div class="thumb">
+          <img src="http://i.imgur.com/9XWolKZ.png" alt="Lontra Ventures Screenshot"> 
+        </div>
+        <div class="description">
+          <div class="title">Lontra Ventures</div>
+          <div class="info">
+            Contract web development for Andrea and Walter Kalmans' Lontra Ventures
+          </div>
+          <div class="tags">
+            <span class="tag">AngularJS</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <div>
+            <a target="_blank" href="http://lontraventures.com" title="Lontra Ventures Site">
+              <i class="fa fa-link"></i>
+              Website
+            </a>
+            &nbsp;
+            <a target="_blank" href="https://github.com/Lontraventures/lontraventures.github.io" title="Lontra Ventures Github">
+              <i class="fa fa-github"></i>
+              Github
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="thumb">
+          <img src="http://i.imgur.com/450IfAs.png" alt="Digital Rebar Screenshot"> 
+        </div>
+        <div class="description">
+          <div class="title">Digital Rebar</div>
+          <div class="info">
+            Contract Web Development for RackN's Digital Rebar Project
+          </div>
+          <div class="tags">
+            <span class="tag">Responsive</span>
+          </div>
+          <div>
+            <a target="_blank" href="http://rebar.digital" title="Digital Rebar Site">
+              <i class="fa fa-link"></i>
+              Website
+            </a>
+            &nbsp;
+            <a target="_blank" href="https://github.com/digitalrebar/digitalrebar.github.io" title="Digital Rebar Github">
+              <i class="fa fa-github"></i>
+              Github
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section>
+      <header class="section">
+        <span>Personal Projects</span>
+        <i class="fa fa-star"></i>
+      </header>
+      <article class="project">
+        <div class="thumb">
+          <img src="http://i.imgur.com/VLrENfi.png" alt="MrSeedbox Screenshot"> 
+        </div>
+        <div class="description">
+          <div class="title">MrSeedbox</div>
+          <div class="info">
+            A containerized seedbox solution designed to be secure, sexy, and simple to use.
+          </div>
+          <div class="tags">
+            <span class="tag">docker</span>
+            <span class="tag">nginx</span>
+            <span class="tag">React</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <a target="_blank" href="https://github.com/meshiest/mrseedbox" title="MrSeedbox Github">
+            <i class="fa fa-github"></i>
+            Github
+          </a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="thumb">
+          <img src="http://i.imgur.com/jYdRt7A.png" alt="Branch Screenshot"> 
+        </div>
+        <div class="description">
+          <div class="title">Branch</div>
+          <div class="info">
+            A game jam winning online multiplayer turn-based strategy game made in 48 hours.
+            Deployed on Google Cloud. Built to be secure.
+          </div>
+          <div class="tags">
+            <span class="tag">docker</span>
+            <span class="tag">nginx</span>
+            <span class="tag">Lets Encrypt</span>
+            <span class="tag">AngularJS</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">NodeJS</span>
+          </div>
+          <div>
+            <a target="_blank" href="http://branchgame.tk" title="Branch Site">
+              <i class="fa fa-link"></i>
+              Website
+            </a>
+            &nbsp;
+            <a target="_blank" href="https://github.com/meshiest/branch-game" title="Branch Github">
+              <i class="fa fa-github"></i>
+              Github
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="project">
+        <div class="thumb">
+          <img src="http://i.imgur.com/tiL0L2U.png?1" alt="Dungeon Game Screenshot"> 
+        </div>
+        <div class="description">
+          <div class="title">Go-Dungeon</div>
+          <div class="info">
+            An OpenGL procedurally generated dungeon demo
+          </div>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">OpenGL</span>
+          </div>
+          <a target="_blank" href="https://github.com/meshiest/dungeon-game" title="MrSeedbox Github">
+            <i class="fa fa-github"></i>
+            Github
+          </a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="title centered">
+          Check out my other projects on
+          <a target="_blank" href="https://github.com/meshiest" title="Github">
+            Github
+          </a>
+        </div>
+      </article>
+    </section>
+    <section>
+      <header class="section">
+        <span>Hobbies</span>
+        <i class="fa fa-heart"></i>
+      </header>
+      <article>
+        <div class="row">
+          <i class="fa fa-code"></i>
+          <div class="content">
+            Coding and Hackathons
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-gamepad"></i>
+          <div class="content">
+            Gaming and Game Jams
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-terminal"></i>
+          <div class="content">
+            Hacking and Systems Administration
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-plane"></i>
+          <div class="content">
+            FPV Quadcopter Building and Piloting
+          </div>
+        </div>
+        <div class="row">
+          <i class="fa fa-book"></i>
+          <div class="content">
+            Learning New Skills
+          </div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
