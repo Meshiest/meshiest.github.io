@@ -1,0 +1,417 @@
+/*
+Stylesheet for MyAnimeList.net profiles
+Copyright (C) 2019 Isaac Hirschfeld
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,900);
+
+@media screen and (min-width: 350px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  footer {
+    z-index: 0;
+    justify-self: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.25;
+    transition: opacity 0.5s;
+  }
+
+  footer:hover {
+    opacity: 1;
+  }
+
+  /*
+
+  Please don't remove this! I worked really hard to make this theme and I'd love if you gave me credit! Feel free to use this theme if you are giving me credit!
+
+  Feel free to PM me on github or reddit if you're interested in commissioning me to style your list!
+
+    - Meshiest
+    
+    myanimelist.net/animelist/Meshiest
+    reddit.com/u/Meshiest
+    github.com/Meshiest
+
+  */
+  footer:before {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    position: fixed;
+    right: 50%;
+    top: calc(50% + 30px);
+    transform: translate(50%, 50%);
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 8px;
+    content: 'Theme made with love by Meshiest';
+    opacity: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    transition: all 0.5s;
+  }
+
+  footer:hover:before {
+  top: 50%;
+    opacity: 1;
+  }
+
+  .status-menu-container {
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 3;
+    left: 0;
+    width: 100%;
+    border: none;
+    background-color: #01579B;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  body.ownlist {
+    background-image: url(http://meshiest.com/bgmagic/index.php) !important;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .list-status-title {
+    background-color: #01579B !important;
+  }
+
+
+  .list-status-title .text {
+    font-size: 0px;
+  }
+
+  .status-button {
+    font-size: 0px !important;
+  }
+
+  .status-button:before {
+    font-family: 'Material Icons';
+    font-size: 16px !important;
+    color: #fff;
+  }
+
+  .status-button:after {
+    opacity: 1 !important;
+    background-color: #fff !important;
+    height: 2px !important;
+    width: 0px !important;
+    left: 8px !important;
+  }
+
+  .status-button:hover:after, .status-button.on:after {
+    width: 40px !important;
+    left: -12px !important;
+  }
+
+  .status-button.all_anime:before {
+    content: 'list';
+  }
+
+  .status-button.watching:before {
+    content: 'play_arrow';
+  }
+  
+  .status-button.reading:before {
+    content: 'bookmark';
+  }
+
+  .status-button.completed:before {
+    content: 'done';
+  }
+
+  .status-button.onhold:before {
+    content: 'pause';
+  }
+
+  .status-button.dropped:before {
+    content: 'stop';
+  }
+
+  .status-button.plantowatch:before {
+    content: 'access_time';
+  }
+  
+  .status-button.plantoread:before {
+    content: 'book';
+  }
+
+  table, tr, td {
+    box-sizing: border-box !important;
+    border: none !important;
+    font-family: 'Roboto' !important;
+    font-weight: 300 !important;
+  }
+
+  tr.list-table-data {
+    transition: background-color 0.2s;
+  }
+
+  .list-item:nth-child(even) {
+    background-color: #eee;
+  }
+
+  tr.list-table-data:hover {
+    background-color: #ddf;
+  }
+
+  td.data.progress {
+    position: relative !important;
+  }
+  
+  tr.list-table-data .data.progress .icon-add-episode {
+    position: absolute;
+    background-color: #33691E;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+  }
+  tr.list-table-data .data.progress .icon-add-episode:hover {
+    background-color: #558B2F;
+  }
+
+  td.data.status {
+    width: 24px !important;
+  }
+
+  td.data.status:before {
+    font-family: 'Material Icons';
+    color: #fff;
+    display: block;
+    transition: all 0.2s;
+  }
+
+  /* Anime Status Icons*/
+  td.data.status.watching:before {
+    content: 'play_arrow';
+  }
+  
+  td.data.status.reading:before {
+    content: 'bookmark';
+  }
+
+  td.data.status.completed:before {
+    content: 'done';
+  }
+
+  td.data.status.onhold:before {
+    content: 'pause';
+  }
+
+  td.data.status.dropped:before {
+    content: 'stop';
+  }
+
+  td.data.status.plantowatch, td.data.status.plantoread {
+    background-color: #00796B !important;
+  }
+
+  td.data.status.plantowatch:before {
+    content: 'access_time';
+  }
+  
+  td.data.status.plantoread:before {
+    content: 'book';
+  }
+
+  /* Hide Preview Icons */
+  .icon-watch.ml4 {
+    display: none;
+  }
+
+  .list-container {
+    border: none;
+    background: transparent;
+  }
+
+  .list-block {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .list-unit {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .loading-space {
+    margin: 0 !important;
+    background-color: #01579B;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .rewatching, .content-status {
+    color: #555 !important;
+  }
+
+  .more-info {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    z-index: 2;
+  }
+  
+  .list-table-data + .more-info table {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+  }
+  
+  .list-table-data:hover + .more-info table {
+    opacity: 1;
+  }
+
+  .more-info table {
+    position: absolute;
+    width: 60%;
+    padding: 8px;
+    transform: translateX(25%);
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .more-info:after {
+    pointer-events: none;
+    border: 2px solid #000;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    position: absolute;
+    width: 100%;
+    left: -5px;
+    top: -31px;
+    height: 34px;
+    content: '';
+  }
+
+
+  #footer-block {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+  }
+
+  #copyright {
+    color: #fff;
+  }
+
+  td.data a {
+    font-weight: 400 !important;
+  }
+
+  th.header-title.image {
+    position: absolute;
+    opacity: 0;
+  }
+
+  td.data.image {
+    position: absolute;
+    left: 0;
+    transform: translate(-120%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+  }
+
+  tr:hover td.data.image {
+    transform: translate(-100%, -50%);
+    opacity: 1;
+  }
+
+  td.data.image img {
+    width: 96px !important;
+    height: auto !important;
+    border: none !important;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  tr.list-table-data:active td.data.status:before {
+    animation: bobble 0.25s 1 linear;
+  }
+
+}
+
+@keyframes bobble {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 1400px) {
+  .list-container {
+    width: 800px;
+  }
+  
+  .list-unit, .list-unit .list-status-title, .list-stats {
+    width: 780px !important;
+  }
+  
+  .data.title.clearfix {
+    white-space: nowrap;
+  }
+  
+  .type {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  .list-container, .list-stats {
+    width: 100%;
+  }
+  
+  .list-unit, .list-unit .list-status-title {
+    width: 100%;
+  }
+  
+  .data.title.clearfix {
+    white-space: nowrap;
+  }
+  
+  .type {
+    display: none !important;
+  }
+  
+  tr.list-table-data .data.progress .icon-add-episode {
+    left: 70%;
+    border-radius: 50%;
+  }
+}
