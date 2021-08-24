@@ -17,7 +17,7 @@
     <style>
       * {
         box-sizing: border-box;
-        font-family: 'Catamaran', sans-serif;
+        font-family: 'Catamaran', Georgia, sans-serif;
         margin: 0;
         padding: 0;
       }
@@ -94,87 +94,12 @@
         text-decoration: underline;
       }
 
-      .thumb img {
-        height: 100px;
-        object-fit: cover;
-        width: 100px;
-      }
-
-      .project {
-        display: flex;
-        margin: 8px 0;
-      }
-
-      .project > .description {
-        display: flex;
-        flex-direction: column;
-        margin: 4px 0 4px 16px;
-      }
-
-      .project .title {
-        color: #666;
-        font-size: 24px;
-        line-height: 24px;
-      }
-
-      .project .info {
-        font-size: 16px;
-        line-height: 20px;
-        padding: 8px 4px 8px 12px;
-      }
-
-
       @media screen and (max-width: 500px) {
         section {
           width: calc(100% - 40px);
         }
-        .project {
-          align-items: center;
-          flex-direction: column;
-        }
-
-        .project img {
-          border-radius: 8px;
-        }
-
-        .project .description {
-          align-items: center;
-          margin: 4px;
-          text-align: center;
-        }
-
-        .project .info {
-          padding: 8px;
-        }
-
-        .tags {
-          justify-content: center;
-        }
       }
 
-      .tags {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .tag {
-        align-items: center;
-        background-color: #ccc;
-        border-radius: 16px;
-        color: #444;
-        display: flex;
-        font-size: 14px;
-        height: 20px;
-        justify-content: center;
-        margin: 2px;
-        padding: 0 8px;
-      }
-
-      .centered {
-        flex: 1;
-        text-align: center;
-      }
     </style>
   </head>
   <body>
@@ -184,7 +109,7 @@
           Isaac Hirschfeld
         </div>
         <div class="subhead">
-          Software Developer
+          Software Engineer
         </div>
       </header>
     </section>
@@ -206,12 +131,6 @@
           <i class="fa fa-github"></i>
           <div class="content">
             <a target="_blank" href="https://github.com/meshiest" title="Github">@meshiest</a>
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-telegram"></i>
-          <div class="content">
-            <a href="https://t.me/reheatedcake" title="Telegram">@reheatedcake</a>
           </div>
         </div>
         <div class="row">
