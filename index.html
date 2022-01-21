@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58828021-2"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-58828021-2"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
       gtag('config', 'UA-58828021-2');
     </script>
-    <title>Isaac Hirschfeld</title>
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:300"
-      rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:300"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="./enc.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       * {
         box-sizing: border-box;
@@ -24,42 +34,14 @@
 
       body {
         align-items: center;
-        background-color: #fefefe;
+        background-color: #111;
+        color: #ddd;
         display: flex;
         flex-direction: column;
       }
 
       header {
         text-align: center;
-      }
-
-      .section {
-        align-items: center;
-        color: #666;
-        display: flex;
-        font-size: 30px;
-        text-align: left;
-      }
-
-      .section span {
-        flex: 1;
-      }
-
-      .section .fa  {
-        text-align: center;
-        width: 40px;
-      }
-
-      .row {
-        color: #666;
-        display: flex;
-        flex-direction: row;
-        margin: 8px 0;
-        width: auto;
-      }
-
-      .row .fa {
-        align-self: center;
       }
 
       .name {
@@ -70,27 +52,31 @@
 
       section {
         margin: 8px;
-        max-width: 400px;
-        width: 100%;
       }
 
-      .row .fa {
-        margin: 0 16px;
+      .info-table .fa {
         text-align: center;
         width: 24px;
+        font-size: 18px;
       }
 
-      .content {
-        display: inline-block;
+      .info-table {
+        width: 400px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px 14px;
+        align-items: center;
       }
 
-      a, a:visited {
+      a,
+      a:visited {
         color: #99f;
         text-decoration: none;
       }
 
-      a:hover, a:focus {
-        color: #88e;
+      a:hover,
+      a:focus {
+        color: #ccf;
         text-decoration: underline;
       }
 
@@ -100,59 +86,86 @@
         }
       }
 
+      * {
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+
+      [enc-html] {
+        color: transparent;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+      }
     </style>
   </head>
   <body>
     <section>
       <header>
-        <div class="name">
-          Isaac Hirschfeld
+        <div
+          class="name"
+          enc-html="9f7a10f36504956cd5d24bfd8fff531f;6ed4c9492621230a1539ffc3aaa3a743a5eee75f6023d1031c03583b28b4dd4d"
+        >
+          First Lastname
         </div>
-        <div class="subhead">
-          Software Engineer
+        <div
+          class="subhead"
+          enc-html="f86b5ae5bd72dd7837ec84fede357c94;653f6e3aa9538516ad4406e22042ad19d1ca200494e4ae00c42d3344705f0538"
+        >
+          Important Role
         </div>
       </header>
     </section>
-    <section>
-      <article>
-        <div class="row">
-          <i class="fa fa-envelope"></i>
-          <div class="content">
-            <a href="mailto:me@reheatedcake.io" title="Email">me@reheatedcake.io</a>
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-linkedin"></i>
-          <div class="content">
-            <a target="_blank" href="https://www.linkedin.com/in/isaac-hirschfeld" title="LinkedIn">isaac-hirschfeld</a>
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-github"></i>
-          <div class="content">
-            <a target="_blank" href="https://github.com/meshiest" title="Github">@meshiest</a>
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-gitlab"></i>
-          <div class="content">
-            <a target="_blank" href="https://gitlab.com/meshiest" title="Github">@meshiest</a>
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-graduation-cap"></i>
-          <div class="content">
-            Stevens Institute of Technology<br/>
-            Cyber Security, Class of 2019
-          </div>
-        </div>
-        <div class="row">
-          <i class="fa fa-map-marker"></i>
-          <div class="content">
-            Austin, TX
-          </div>
-        </div>
-      </article>
-    </section>
+    <div class="info-table">
+      <i class="fa fa-envelope"></i>
+      <a
+        href="#"
+        title="Email"
+        enc-html="de3bf8b60fe4a19e940dff5baff74acb;578f42fbaf53d82e7daaf106c167cab30d54af3f6020f5dd5b57771330c449be"
+        enc-href="214ca6f57619c8720dabfb75519cabf2;f2b50d74b925504150cdbc91e66bfc902b6e4dfe3343db407689d5f703066874"
+      >
+        first@lastname.com
+      </a>
+      <i class="fa fa-linkedin"></i>
+      <a
+        target="_blank"
+        href="#"
+        title="LinkedIn"
+        enc-html="dec96f328e200865328faf1d39715406;579e2af0b9fcc62f28b7131aaaba0ba1037dbb32250ce3cdc1c829bae91a317b"
+        enc-href="bbfe2b55afe4a545bba1e6d1b262dcdd;f88467347c5733cf7d5525ee1d138c3b8becdd3d0d07a93739a52b11522ee9bee3872ae1d3f445e16171809ab8e4584d"
+      >
+        first-lastname
+      </a>
+      <i class="fa fa-github"></i>
+      <a
+        target="_blank"
+        href="#"
+        title="Github"
+        enc-href="dece0593fc185df176963399dcf972b6;768a51c22b9371e0cdcaf9ab135e95213babd210695bb5690c7a8f5551d970ef"
+        enc-html="c65496d4bb46d5f1250979f0c2545904;852ff14dbf64d2d20ec5f6783a6ed7a6"
+      >
+        @github
+      </a>
+      <i class="fa fa-gitlab"></i>
+      <a
+        target="_blank"
+        href="#"
+        title="Gitlab"
+        enc-href="08f1088e57b7aff67c21643c1a72cd7a;5dc64e279fa690abe7d2557ec28c38afc8b01d57525f7484629f95fd43e53cd2"
+        enc-html="1eeba147f68db823ec849672de088a06;a38ec2fe80995c434d908969a43e7c5a"
+      >
+        @gitlab
+      </a>
+      <i class="fa fa-graduation-cap"></i>
+      <div
+        enc-html="851308bd42a037badf7716da1f585976;08e314d38da9ec0adb82f2c5d2f69fb67d9ab7751cce005f180099039eedb1582bba9a96f3f0338e0e85a4638bb24f0884ab14351ddb6b192467327660f5b93ed45ff7e2bae281e0e51d37f38f7643b8"
+      >
+        Name of College<br />
+        Major, Class of Year
+      </div>
+      <i class="fa fa-map-marker"></i>
+      <div
+        enc-html="56b0c6b395d4c3031e62d7e7b1be9a6c;979fd062d118068bf6dbac31c01060bf"
+      >
+        City, ST
+      </div>
+    </div>
   </body>
 </html>
